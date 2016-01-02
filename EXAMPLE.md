@@ -396,12 +396,14 @@ Percent_Accuracy  average 44.23 stderr 0.00
 
 # Precision, Recall en F-Score
 Flevoland
-Precision 	= tp/tp+fp = 502/(69+2+6)
-Recall 		= 
+Precision 	= 52/(52+3+90+5+23+313+20+7+502)	= 5,12%
+Recall 		= 52/(52+1+1+1+1+1) 				= 0,91%
 F-Score 	=
 
 Friesland
-
+Precision	= 
+Recall		= 
+F-Score		= 
 
 Gelderland
 
