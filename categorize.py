@@ -11,6 +11,7 @@ def main():
 	tweets = pickle.load(open('tweets.pickle','rb'))
 	os.chdir("collection")
 	for key,value in tweets.items():
+		filenameEnd = 0
 		if key in provinces:
 			if not os.path.exists(key):
 				os.makedirs(key)
@@ -20,7 +21,8 @@ def main():
 				twitterUser = tweet[1]
 				twitterText = tweet[2]
 				twitterGEO	= tweet[3]
-				filename = twitterID+".txt"
+				filenameEnd += 1
+				filename = "art."+str(filenameEnd)
 				file = open(filename, "w")
 				file.write(twitterText)
 				file.close()
