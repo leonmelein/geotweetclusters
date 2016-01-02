@@ -1,8 +1,8 @@
 # Geografische Tweetclusters
-Geolocatie van Nederlandstalige twitterberichten via *Naive Bayes*-tekstclassificatie.
+Geolocatie van Nederlandstalige twitterberichten via *Naive Bayes*-tekstclassificatie. Een project van Léon Melein en Reinard van Dalen voor het vak Information Retrieval van de bachelor Informatiekunde van de Rijksuniversiteit Groningen.
 
 ## Algemeen
-Deze Python-programma’s kunnen worden gebruikt om een verzameling twitterberichten voor te bereiden voor gebruik met het programma [*Rainbow*](http://www.cs.cmu.edu/~mccallum/bow/rainbow/), een tekstclassificatieprogramma. Deze programma’s zijn vrijgegeven onder een MIT-licentie. Zie LICENSE.md voor alle details.
+Deze Python-programma’s kunnen worden gebruikt om een verzameling twitterberichten voor te bereiden voor gebruik met het programma [*Rainbow*](http://www.cs.cmu.edu/~mccallum/bow/rainbow/), een tekstclassificatieprogramma. Deze programma’s zijn vrijgegeven onder een MIT-licentie. Zie LICENSE voor alle details.
 
 ## Gebruik
 ### Verkrijgen van dataset
