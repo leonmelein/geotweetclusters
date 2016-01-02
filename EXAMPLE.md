@@ -15,6 +15,8 @@ Groningen 10877
 Noord-Brabant 42867
 Flevoland 10146
 
+Totaal aantal Tweets: 37863
+
 # Indexing using Rainbow
 /net/aps/32/bin/rainbow --index Flevoland/ Friesland/ Gelderland/ Groningen/ Limburg/ Noord-Brabant/ Noord-Holland/ Overijssel/ Utrecht/ Zeeland/ Zuid-Holland
 Class `Flevoland'
