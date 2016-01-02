@@ -18,6 +18,7 @@ Flevoland 10146
 Totaal aantal Tweets: 37863
 
 # Indexing using Rainbow
+# 10-fold
 /net/aps/32/bin/rainbow --index Flevoland/ Friesland/ Gelderland/ Groningen/ Limburg/ Noord-Brabant/ Noord-Holland/ Overijssel/ Utrecht/ Zeeland/ Zuid-Holland
 Class `Flevoland'
   Gathering stats... files : unique-words ::  10146 :    24449
@@ -356,3 +357,76 @@ Correct: 16831 out of 37863 (44.45 percent accuracy)
 10  Zuid-Holland   1   4 318   2  17 117 1168  32  14   1 6645  :8319  79.88%
 
 Percent_Accuracy  average 44.38 stderr 0.05
+
+# 1-fold
+/net/aps/32/bin/rainbow --test=1 --method=naivebayes --test-set=0.1 | /net/aps/32/bin/rainbow-stats
+Loading data files...
+Randomly selected 37863 documents for the test set:
+   1015 : Flevoland
+   1937 : Friesland
+   5588 : Gelderland
+   1088 : Groningen
+   1732 : Limburg
+   4287 : Noord-Brabant
+   7413 : Noord-Holland
+   3039 : Overijssel
+   2538 : Utrecht
+    907 : Zeeland
+   8319 : Zuid-Holland
+Placed remaining 340774 documents in the train set:
+Trial 0
+
+Correct: 16746 out of 37863 (44.23 percent accuracy)
+
+ - Confusion details, row is actual, column is predicted
+       classname   0   1   2   3   4   5   6   7   8   9  10  :total
+ 0     Flevoland  52   3  90   .   5  23 313  20   7   . 502  :1015   5.12%
+ 1     Friesland   1 424 189   .   2  34 418  34   2   . 833  :1937  21.89%
+ 2    Gelderland   .   5 2329   .   1 111 1006  43   7   . 2086  :5588  41.68%
+ 3     Groningen   .   1  93 109   .  23 274  19   4   . 565  :1088  10.02%
+ 4       Limburg   .   1 119   . 275  67 377  10   2   . 881  :1732  15.88%
+ 5 Noord-Brabant   1   2 263   .  14 1247 838  25   9   1 1887  :4287  29.09%
+ 6 Noord-Holland   1  13 309   1   3 110 4392  28   6   1 2549  :7413  59.25%
+ 7    Overijssel   .   1 228   1   1  81 595 861   5   . 1266  :3039  28.33%
+ 8       Utrecht   1   2 208   .   5  45 701  17 306   . 1253  :2538  12.06%
+ 9       Zeeland   .   .  97   1   2  44 227   5   5  56 470  :907   6.17%
+10  Zuid-Holland   1   5 264   1  23 118 1181  21   9   1 6695  :8319  80.48%
+
+Percent_Accuracy  average 44.23 stderr 0.00
+
+# Precision, Recall en F-Score
+Flevoland
+Precision 	= tp/tp+fp = 502/(69+2+6)
+Recall 		= 
+F-Score 	=
+
+Friesland
+
+
+Gelderland
+
+
+Groningen
+
+
+Limburg
+
+
+Noord-Branbant
+
+
+Noord-Holland
+
+
+Overijssel
+
+
+Utrecht
+
+
+Zeeland
+
+
+Zuid-Holland
+
+
