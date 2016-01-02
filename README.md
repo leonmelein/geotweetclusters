@@ -2,7 +2,8 @@
 Geolocatie van twitterberichten via tekstclassificatie
 
 # Nederlandse Tweets Augustus 2015 
-
+zcat /net/corpora/twitter2/Tweets/2015/08/* | /net/corpora/twitter2/tools/tweet2tab id user coordinates | wc -l
+20372259
 
 # Nederlandse Tweets met GEO Place als resulaat van clearData.py geteld met count.py
 Noord-Holland 74132
