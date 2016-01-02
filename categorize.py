@@ -11,7 +11,7 @@ def main():
 	tweets = pickle.load(open('tweets.pickle','rb'))
 	os.chdir("collection")
 	for key,value in tweets.items():
-		filenameEnd = 0
+		filenameEnd = -1
 		if key in provinces:
 			if not os.path.exists(key):
 				os.makedirs(key)
@@ -23,7 +23,7 @@ def main():
 				twitterGEO	= tweet[3]
 				filenameEnd += 1
 				filename = "art."+str(filenameEnd)
-				file = open(filename, "w")
+				file = open(filename, "w", encoding="iso-8859-1")
 				file.write(twitterText)
 				file.close()
 			os.chdir("..")
