@@ -1,44 +1,20 @@
-# geotweetclusters
-Geolocatie van twitterberichten via tekstclassificatie
+# Geografische Tweetclusters
+Geolocatie van Nederlandstalige twitterberichten via *Naive Bayes*-tekstclassificatie.
 
-# Nederlandse Tweets Augustus 2015 
-zcat /net/corpora/twitter2/Tweets/2015/08/* | /net/corpora/twitter2/tools/tweet2tab id user coordinates | wc -l
-20372259
+## Algemeen
+Deze Python-programma’s kunnen worden gebruikt om een verzameling twitterberichten voor te bereiden voor gebruik met het programma [*Rainbow*](http://www.cs.cmu.edu/~mccallum/bow/rainbow/), een tekstclassificatieprogramma. Deze programma’s zijn vrijgegeven onder een MIT-licentie. Zie LICENSE.md voor alle details.
 
-# Nederlandse Tweets met GEO Place als resulaat van clearData.py geteld met count.py
-Noord-Holland 74132
-Friesland 19368
-Overijssel 30400
-Utrecht 25382
-Gelderland 55874
-Zuid-Holland 83199
-Zeeland 9078
-Limburg 17314
-Groningen 10877
-Noord-Brabant 42867
-Flevoland 10146
+## Gebruik
+### Verkrijgen van dataset
+Om twitterberichten te kunnen gebruiken voor geolocatie op basis van *Naive Bayes*-tekstclassificatie, moeten deze in een tekstbestand staan met het volgende format: tweetid, gebruikersnaam, bericht, locatie. 
 
-# Indexing using Rainbow
-/net/aps/32/bin/rainbow --index Flevoland/ Friesland/ Gelderland/ Groningen/ Limburg/ Noord-Brabant/ Noord-Holland/ Overijssel/ Utrecht/ Zeeland/ Zuid-Holland
-Class `Flevoland'
-  Gathering stats... files : unique-words ::  10146 :    24449
-Class `Friesland'
-  Gathering stats... files : unique-words ::  19368 :    51310
-Class `Gelderland'
-  Gathering stats... files : unique-words ::  55874 :   109126
-Class `Groningen'
-  Gathering stats... files : unique-words ::  10877 :   119141
-Class `Limburg'
-  Gathering stats... files : unique-words ::  17314 :   136406
-Class `Noord-Brabant'
-  Gathering stats... files : unique-words ::  42867 :   174110
-Class `Noord-Holland'
-  Gathering stats... files : unique-words ::  74132 :   237194
-Class `Overijssel'
-  Gathering stats... files : unique-words ::  30400 :   262316
-Class `Utrecht'
-  Gathering stats... files : unique-words ::  25382 :   280125
-Class `Zeeland'
-  Gathering stats... files : unique-words ::   9078 :   286271
-Class `Zuid-Holland'
-  Gathering stats... files : unique-words ::  83199 :   337652
+Op de linuxwerkplek (LWP) van de RUG kan deze data als volgt worden geëxtraheerd uit de verzameling Nederlandstalige twitterberichten:
+```bash
+zcat /net/corpora/twitter2/Tweets/2015/08/* | /net/corpora/twitter2/tools/tweet2tab id user coordinates > output.txt
+```
+### Verwerken van data
+Met het programma *clearData.py* wordt het tekstbestand met twitterberichten omgezet in een Python-dictionary, zodat deze tweets snel doorlopen kunnen worden tijdens de verdere verwerking. Deze dictionary wordt weggeschreven naar een bestand.
+
+Vervolgens kan met het programma *categorize.py* de verzameling twitterberichten worden omgezet in een bruikbaar corpus voor *Rainbow*. De tweets worden per provincie onderverdeeld in mappen. Elke afzonderlijke tweet wordt weggeschreven naar een tekstbestand.
+
+
