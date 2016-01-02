@@ -27,12 +27,11 @@ def main():
 
                 # Remove emoji's from tweet
                 clearEmojis = twitterText.encode("iso-8859-1", "ignore")
-                twitterText = clearEmojis.decode()
 
                 filenameEnd += 1
                 filename = "art." + str(filenameEnd)
                 file = open(filename, "w", encoding="iso-8859-1")
-                file.write(twitterText)
+                file.write(clearEmojis.decode(encoding="iso-8859-1"))
                 file.close()
             os.chdir("..")
 
