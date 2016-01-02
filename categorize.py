@@ -1,6 +1,6 @@
 # categorize.py
 # Reinard van Dalen (s2497867)
-# Léon Melein (s)
+# Léon Melein (s2580861)
 
 import pickle
 import sys
@@ -9,6 +9,8 @@ import os
 def main():
 	provinces = ['Noord-Holland', 'Zuid-Holland', 'Noord-Brabant', 'Gelderland', 'Zeeland', 'Friesland', 'Utrecht', 'Limburg', 'Overijssel', 'Drenthe', 'Groningen', 'Flevoland']
 	tweets = pickle.load(open('tweets.pickle','rb'))
+	if not os.path.exists("collection"):
+		os.mkdir("collection")
 	os.chdir("collection")
 	for key,value in tweets.items():
 		filenameEnd = -1
@@ -21,6 +23,11 @@ def main():
 				twitterUser = tweet[1]
 				twitterText = tweet[2]
 				twitterGEO	= tweet[3]
+
+				# Remove emoji's from tweet
+ 				clearEmojis = tweet.encode("iso-8859-1", "ignore")
+				twitterText = clearEmojis.decode()
+
 				filenameEnd += 1
 				filename = "art."+str(filenameEnd)
 				file = open(filename, "w", encoding="iso-8859-1")

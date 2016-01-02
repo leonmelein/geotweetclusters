@@ -1,6 +1,6 @@
 # clearData.py
 # Reinard van Dalen (s2497867)
-# Léon Melein (s)
+# Léon Melein (s2580861)
 
 import pickle
 import sys
