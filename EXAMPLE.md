@@ -514,4 +514,4 @@ Incl. Feature Selection 	Excl. Feature Selection
 t-score : 31,406
 p-value	: 0,000
 
-De p-waarde is <0,005. Er is dus sprake van een significant verschil tussen het gebruik van de feature selection en het niet gebruiken ervan.
+De p-waarde is <0,05. Er is dus sprake van een significant verschil tussen het gebruik van de feature selection en het niet gebruiken ervan.
