@@ -19,7 +19,7 @@ Totaal aantal Tweets: 37863
 
 # Indexing using Rainbow
 # 10-fold
-/net/aps/32/bin/rainbow --index Flevoland/ Friesland/ Gelderland/ Groningen/ Limburg/ Noord-Brabant/ Noord-Holland/ Overijssel/ Utrecht/ Zeeland/ Zuid-Holland
+/net/aps/32/bin/rainbow --index Flevoland/ Friesland/ Gelderland/ Groningen/ Limburg/ Noord-Brabant/ Noord-Holland/ Overijssel/ Utrecht/ Zeeland/ Zuid-Holland/
 Class `Flevoland'
   Gathering stats... files : unique-words ::  10146 :    24449
 Class `Friesland'
@@ -497,7 +497,7 @@ Recall 		: 64,76%
 F-Score		: 45,99%
 
 # Significant verschil tussen wel/geen Feature selection
-Unpaird t-test SPSS
+Unpaired t-test SPSS
 
 Incl. Feature Selection 	Excl. Feature Selection
 47,37						44,27
