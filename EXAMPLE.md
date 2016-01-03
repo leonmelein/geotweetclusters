@@ -455,3 +455,26 @@ Overall
 Precision	= (5,12%+21,89%+41,68%+10,02%+15,88%+29,09%+59,25%+28,33%+12,06%+80,48%+28,33%)/11	= 30%
 Recall		= (91%+93%+56%+83%+66%+43%+80%+85%+95%+35%)/11										= 66%
 F-Score		= (2*30*66)/(30+66)																	= 41,25%
+
+# Feature Selection
+/net/aps/32/bin/rainbow --prune-vocab-by-infogain=50 --test=10 --method=naivebayes --test-set=0.1 | /net/aps/32/bin/rainbow-stats
+
+N 			Accuracy
+50			26,03
+100			27,93
+500			
+1000		
+2000		
+3000		
+4000		
+5000		
+6000		
+7000		
+8000		
+9000		
+10000		
+15000		
+20000		
+
+# Significant verschil tussen wel/geen Feature selection
+Unpaird t-test SPSS
