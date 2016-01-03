@@ -392,7 +392,6 @@ Correct: 16746 out of 37863 (44.23 percent accuracy)
  9       Zeeland   .   .  97   1   2  44 227   5   5  56 470  :907   6.17%
 10  Zuid-Holland   1   5 264   1  23 118 1181  21   9   1 6695  :8319  80.48%
 
-502+833+2086+565+881+1887+2549+1266+1253+470+6695
 Percent_Accuracy  average 44.23 stderr 0.00
 
 # Precision, Recall en F-Score
@@ -483,17 +482,36 @@ N 			Accuracy
 60000		47,08
 70000		47,15
 75000		47,16
-76000		
-77000		
-78000		
+75125		47,27
+75250		47,11
+75500		47,02
+76000		46,91
 80000		46,86
 90000		46,75
 100000		46,69
 
-Beste bij de 70000 meest informatieve woorden.
+Beste bij de 75125 meest informatieve woorden.
+Accuracy 	: 47,27
+Precision 	: 35,65%
+Recall 		: 64,76%
+F-Score		: 45,99%
 
 # Significant verschil tussen wel/geen Feature selection
 Unpaird t-test SPSS
 
 Incl. Feature Selection 	Excl. Feature Selection
+47,37						44,27
+47,53						44,02
+47,50						44,31
+47,31						44,47
+46,80						44,28
+47,03						44,41
+47,31						44,35
+47,11						44,53
+47,22						44,67
+47,48						44,45
 
+t-score : 31,406
+p-value	: 0,000
+
+De p-waarde is <0,005. Er is dus sprake van een significant verschil tussen het gebruik van de feature selection en het niet gebruiken ervan.
